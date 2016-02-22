@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>Colorado College Online Collections</h2>
+<h1 style="color: #96172E; font-weight: bold;">John Peabody Harrington Papers</h1>
+ {# START row-fluid DIV #}
+ <div class="row">
+  {# START facets DIV #}
+  <div class="col-md-3">
+    <div class="well well-small">
+     <h3>All Manuscripts</h3>
+     <ul>
+     </ul>
+    </div>
+  {# END facets DIV #}
+  </div>
+  <div class="col-md-8" >
+   <div class="pull-right" style="float: right">
+     <img src="{{ url_for('static', filename="img/John_Peabody_Harrington_(1884-1961)_and_Chief_Wiishi_of_Mission_Indians.jpg") }}">
+     <p><small>Photograph of John Peabody Harrington with Chief Wiishi of Mission Indians 
+      Source: <a href="https://en.wikipedia.org/wiki/John_Peabody_Harrington">Wikipedia</a> </small>
+    </p>
+   </div>
+   <p>
+    John Peabody Harrington was a Bureau of American Ethnology ethnologist 
+    involved in the study of over one hundred American tribes. His speciality 
+    was linguistics. Most of the material concerns California, southwestern, 
+    northwestern tribes and includes ethnological, archaeological, historical 
+    notes; writings, correspondence, photographs, sound recordings, biological 
+    specimens, and other types of documents.
+   </p>
+   <p>
+   More information about Harrington and his work is available through the 
+   <a href="http://siris-archives.si.edu/ipac20/ipac.jsp?session=120374L6012NF.1723&profile=all&source=~!siarchives&view=subscriptionsummary&uri=full=3100001~!87802~!2&ri=1&aspect=power&menu=search&ipp=20&spp=20&staffonly=&term=kiowa+language&index=.GW&uindex=&aspect=power&menu=search&ri=1">Smithsonian</a>.
+   </p>
+   <p>
+    Please note that this online collection is a very small subset of his papers and 
+    access limited to the Colorado College campus.
+   </p>
+   <p>This online resource is provided by Colorado College's 
+    <a href="http://www.coloradocollege.edu/academics/dept/anthropology/">Department of Anthropology</a> and
+    the <a href="http://www.coloradocollege.edu/library/">Tutt Library</a>. 
+   </p>
+  {# END row-fluid DIV #}
+ </div>
+{# START Topic Word Cloud #}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">
+     <h3>Topic Cloud</h3>
+      ""|display_topic_cloud       
+
+    </div>
+  </div>
+{# END Topic Word Cloud #}
+</div>
+{% endblock %}
+
+{% block more_js %}
+<script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+<script src="{{ STATIC_URL }}js/knockout.js"></script>
+{% endblock %}
+
